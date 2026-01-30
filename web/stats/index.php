@@ -14,7 +14,7 @@
 		Fixed double connection bug
 
 /* Set your nfs:u server ip adress here! */
-$server_ip = "127.0.0.1";
+$server_ip = "nfsuserver";
 $server_port = 10980;
 /* ------------------------------------- */
 
@@ -177,18 +177,21 @@ else
 	}
 	$arrdata=null; //cleaning..
 }
-@fclose($fp);
+if ($fp !== false) {
+    fclose($fp);
+}
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>NFS:U LAN Server "<?php echo($servername); ?>" @ <?p$server_ip;?> : <?php 
+<title>NFS:U LAN Server "<?php echo($servername); ?>" @ <?= $server_ip; ?> : <?php 
 	if($msg)
 		echo "Offline";
 	else
 		echo "Usercount ".$usercount;
-	?></title>
+?></title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <style type="text/css">
 <!--
