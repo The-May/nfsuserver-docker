@@ -1,45 +1,24 @@
 
-# Need For Speed: Underground Server
+# Need For Speed: Underground Server Docker Image
 
-This server was initially developed by [3 PriedeZ](http://3priedez.net)
+This Project is forked from [HarpyWar/nfsuserver](https://github.com/HarpyWar/nfsuserver) and it only focuses on creating a 1-click solution on deploying a Docker Container.
 
-It support only 1-st [Need for Speed: Underground](https://en.wikipedia.org/wiki/Need_for_Speed:_Underground), but not Underground 2.
 
 ## Server Installation
 
 ### Linux
 
-Download static binary from [Releases](https://github.com/HarpyWar/nfsuserver/releases) or build it from sources:
+Docker Deploy
 
 ```
-apt-get install git make build-essential
-git clone https://github.com/HarpyWar/nfsuserver.git
-cd nfsuserver/nfsuserver
-make
-./nfsuserver
+code here - work in progress
 ```
-
-### Windows
-
-Download `nfsuserver.1.0.4.win32.zip` from [Releases](https://github.com/HarpyWar/nfsuserver/releases) or use Visual Studio to build own executable (uncomment [NT_SERVICE](https://github.com/HarpyWar/nfsuserver/blob/master/nfsuserver/win_nix.h#L5) flag for Windows service mode.). For compilation you have to install [Windows SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/).
-
-`nfsuserver.exe` is for normal start, not a service.
-
-To install a server as a Windows Service run:
-```
-nfsuserver_svc.exe -i
-```
-To uninstall run:
-```
-nfsuserver_svc.exe -u
-```
-
-
 
 
 ## Server Configuration
 
 Edit `nfsu.conf` and `news.txt` to suit your needs.
+They are accissable through the mapping in the compose file
 
 After first start `server.log` should be created. After first user login a database `rusers.dat` with users should be created.
 
