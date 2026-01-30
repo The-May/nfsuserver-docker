@@ -2,6 +2,8 @@
 # Need For Speed: Underground Server Docker Image
 
 This Project is forked from [HarpyWar/nfsuserver](https://github.com/HarpyWar/nfsuserver) and it only focuses on creating a 1-click solution on deploying a Docker Container.
+Please Note:
+Security was never a key point in this, since I want to use it for a local/offline LAN-Party with people that I trust and therefore hardening was never considered.
 
 
 ## Server Installation
