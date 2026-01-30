@@ -1,0 +1,26 @@
+#version: "3.8"
+
+services:
+  nfsuserver:
+    build: .
+    container_name: nfsuserver
+    restart: unless-stopped
+
+    ports:
+      - "10900:10900/tcp"
+      - "10901:10901/tcp"
+      - "10980:10980/tcp"
+      - "10800:10800/tcp"
+      - "10800:10800/udp"
+
+    volumes:
+      - ./config/nfsu.conf:/opt/nfsuserver/nfsu.conf:ro
+      - ./config/news.txt:/opt/nfsuserver/news.txt:ro
+
+
+
+
+
+
+
+
