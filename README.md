@@ -11,7 +11,12 @@ This Project is forked from [HarpyWar/nfsuserver](https://github.com/HarpyWar/nf
 Docker Deploy
 
 ```
-code here - work in progress
+[go to the dir where the server should be copied to]
+
+git clone https://github.com/The-May/nfsuserver-docker
+cd nfsuserver-docker
+sudo chmod +x deploy.sh
+./deploy.sh
 ```
 
 
@@ -20,7 +25,13 @@ code here - work in progress
 Edit `nfsu.conf` and `news.txt` to suit your needs.
 They are accissable through the mapping in the compose file
 
-After first start `server.log` should be created. After first user login a database `rusers.dat` with users should be created.
+After first start `server.log` should be created. 
+View Docker logs of the server:
+```
+docker compose logs
+```
+
+After first user login a database `rusers.dat` with users should be created.
 
 ### Port forwarding
 
