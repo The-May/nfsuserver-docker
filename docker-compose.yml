@@ -3,12 +3,15 @@ services:
     image: ghcr.io/the-may/nfsuserver:latest
     container_name: nfsuserver
     restart: unless-stopped
-    ports:
-      - "10900:10900/tcp"
-      - "10901:10901/tcp"
-      - "10980:10980/tcp"
-      - "10800:10800/tcp"
-      - "10800:10800/udp"
+    network_mode: "host"
+#    ports:
+#      - "10900:10900/tcp"
+#      - "10901:10901/tcp"
+#      - "10980:10980/tcp"
+#      - "10800:10800/tcp"
+#      - "10800:10800/udp"
+#      - "3658-3659:3658-3659/tcp"
+
     volumes:
       - ./config/nfsu.conf:/opt/nfsuserver/nfsu.conf:ro
       - ./config/news.txt:/opt/nfsuserver/news.txt:ro
