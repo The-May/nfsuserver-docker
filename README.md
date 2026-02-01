@@ -51,15 +51,7 @@ The server requires the following ports to be forwarded:
 
 ## Client Configuration
 
-1. Download and run [nfsuclient.exe](https://github.com/HarpyWar/nfsuserver/releases/download/client/nfsuclient.exe). Click on `Get Game` button to download ready to play NFSU game v1.4 with noCD and Widescreen with HD resolution.
-
-2. Click `Get public serverlist` or `Add Server` to put your server address manually, and then click `Use Server`
-
-3. Run the game &rarr; Select `Play Online` &rarr; Create a new profile, agree with rules and click `Use Profile`
-
-After a login you have to select car and join a room to create/join a game. Note that hosting a lobby requires port 3658 UDP to be forwarded.
-
-![NFSU Lobby](http://i.imgur.com/ntGM3VF.jpg)
+1. I initially used the .exe from https://www.nfsplanet.com/download_sel.php?file=http://ftp.gamesweb.com/pub/nfs5/nfs7/tools/lan/nfsu_lan.1.0.1.zip&key=358ddb7e97451f5ecb03f42d195b9816&lang=eng which worked without AV warnings OR get [https://nfsu.onlyami.ga/files/](https://github.com/Pelorojo/NFSUServerChanger) which seems like a much better approach.
 
 
 ## Documentation
