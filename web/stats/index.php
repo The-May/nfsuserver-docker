@@ -14,7 +14,7 @@
 		Fixed double connection bug
 
 /* Set your nfs:u server ip adress here! */
-$server_ip = "nfsuserver";
+$server_ip = "localhost";
 $server_port = 10980;
 /* ------------------------------------- */
 
