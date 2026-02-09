@@ -41,7 +41,8 @@ After first user login a database `rusers.dat` with users should be created.
 
 ### Port forwarding
 
-The server requires the following ports to be forwarded:
+The server runs on hostmode and access via LAN
+if exposing to WAN it at least requires the following ports to be forwarded (not recommended by me)
 
 * 10900 TCP
 * 10901 TCP
