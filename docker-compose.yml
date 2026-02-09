@@ -3,7 +3,8 @@ services:
     image: ghcr.io/the-may/nfsuserver:latest
     container_name: nfsuserver
     restart: unless-stopped
-    network_mode: "host"
+    network_mode: host
+#The Server runs on hostmode IF you do not want to, these are some ports that need to exposed:
 #    ports:
 #      - "10900:10900/tcp"
 #      - "10901:10901/tcp"
@@ -11,26 +12,29 @@ services:
 #      - "10800:10800/tcp"
 #      - "10800:10800/udp"
 #      - "3658-3659:3658-3659/tcp"
-
+#make sure to git clone these files from the repo or it wont work
     volumes:
-      - ./config/nfsu.conf:/opt/nfsuserver/nfsu.conf:ro
-      - ./config/news.txt:/opt/nfsuserver/news.txt:ro
-
+      - ./config/nfsu.conf:/opt/nfsuserver/nfsu.conf
+      - ./config/news.txt:/opt/nfsuserver/news.txt
+      
+#basic Webserver that shows some statistics, feel free to comment out php and web, since they are totally optional
   php:
     image: php:8.2-fpm-alpine
     container_name: nfsu-php
     restart: unless-stopped
+    network_mode: host
     volumes:
       - ./web:/var/www/html
-
+      
+#webserver runs on http port 10780
   web:
     image: nginx:alpine
     container_name: nfsu-web
     restart: unless-stopped
+    network_mode: host
     depends_on:
       - php
-    ports:
-      - "10780:80"
     volumes:
       - ./web:/var/www/html
       - ./web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
